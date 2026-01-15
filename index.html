@@ -4,443 +4,283 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>LKS Polyclinic | Best Multi-Specialty Clinic in Korattur, Chennai</title>
-    <meta name="description" content="LKS Polyclinic in Korattur offers expert care in Pulmonology, Oncology, ENT, and Diabetology. Founded by Dr. Koushik Lakshmipathy. In-house Lab & Pharmacy available.">
-    <meta name="keywords" content="LKS Polyclinic, Pulmonologist Chennai, Lung Specialist Korattur, ENT Specialist, Diabetologist, Oncology, Dr. Koushik Lakshmipathy, Best Clinic Chennai">
+    <title>LKS Polyclinic | Best Pulmonology & Multi-Specialty Clinic Chennai</title>
+    <meta name="description" content="LKS Polyclinic in Korattur offers expert care in Pulmonology, Oncology, ENT, and Diabetology. Founded by Dr. Koushik Lakshmipathy. Book Appointment Today.">
+    <meta name="keywords" content="LKS Polyclinic, Pulmonologist Chennai, Lung Specialist Korattur, ENT Specialist, Dr. Koushik Lakshmipathy">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="LKS Polyclinic">
+    <link rel="canonical" href="https://www.lkspolyclinic.com/">
     
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.lkspolyclinic.com/">
-    <meta property="og:title" content="LKS Polyclinic | Expert Medical Care in Chennai">
-    <meta property="og:description" content="Comprehensive care for Pulmonology, ENT, Oncology, and Diabetes. Visit us in Periyar Nagar, Korattur.">
-    <meta property="og:image" content="https://www.lkspolyclinic.com/logo.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        /* --- BRAND VARIABLES --- */
         :root {
-            /* UPDATE THESE HEX CODES TO MATCH YOUR EXACT LOGO COLORS */
-            --primary-color: #0056b3; /* Deep Medical Blue */
-            --secondary-color: #00a8cc; /* Teal/Cyan Accent */
-            --accent-color: #f8f9fa; /* Light Gray Background */
-            --text-dark: #333333;
-            --text-light: #666666;
+            --primary: #0056b3; /* Medical Blue */
+            --secondary: #00a8cc; /* Teal Accent */
+            --dark: #333333;
+            --light-bg: #f9f9fa;
             --white: #ffffff;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s ease;
+            --whatsapp: #25D366;
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        /* --- GLOBAL RESET --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+        body { background: var(--light-bg); color: var(--dark); padding-top: 70px; }
+        a { text-decoration: none; color: inherit; }
+
+        /* --- Header (Sticky) --- */
+        header {
+            background: var(--white);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
-        html {
-            scroll-behavior: smooth;
+        .logo { font-size: 24px; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+        .logo i { color: var(--secondary); }
+        
+        .header-contact {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
-        body {
-            color: var(--text-dark);
+        .phone-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 18px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(135deg, #eef2f3 0%, #ffffff 100%);
+            padding: 40px 5%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 80vh;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 350px;
+            padding-right: 40px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: #e3f2fd;
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .hero h1 span { color: var(--primary); }
+
+        .hero-sub {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
             line-height: 1.6;
-            background-color: var(--white);
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
+        /* Replicating the "Form" look but as a WhatsApp Card */
+        .hero-cta-card {
+            flex: 0 0 380px;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 5px solid var(--secondary);
         }
 
-        ul {
-            list-style: none;
+        .cta-title { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+        .cta-sub { font-size: 14px; color: #777; margin-bottom: 25px; }
+
+        .wa-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--whatsapp);
+            color: white;
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 700;
+            transition: 0.3s;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
         }
 
-        .container {
+        .wa-button:hover { background: #20bd5a; transform: translateY(-2px); }
+
+        .call-button-sec {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        
+        .call-button-sec:hover { background: var(--primary); color: white; }
+
+        /* --- Centres of Excellence --- */
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 32px; color: var(--dark); margin-bottom: 10px; }
+        .section-title .line { width: 60px; height: 4px; background: var(--secondary); margin: 0 auto; }
+
+        .coe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .section-padding {
-            padding: 80px 0;
-        }
-
-        /* --- BUTTONS --- */
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: var(--primary-color);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background: var(--primary-color);
-            color: var(--white);
-        }
-
-        /* --- HEADER & NAV --- */
-        header {
+        .coe-card {
             background: var(--white);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .logo i {
-            color: var(--secondary-color);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            font-weight: 500;
-            color: var(--text-dark);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            font-size: 24px;
-            color: var(--primary-color);
-            cursor: pointer;
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 168, 204, 0.7)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'); /* Placeholder Image */
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            align-items: center;
+            padding: 25px;
             text-align: center;
-            color: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .coe-card:hover { border-color: var(--secondary); transform: translateY(-5px); }
+        .coe-icon { font-size: 30px; color: var(--primary); margin-bottom: 15px; }
+        .coe-name { font-weight: 600; color: #444; }
+
+        /* --- Why Choose Us (Stats) --- */
+        .stats-section {
+            background: var(--primary);
+            color: white;
+            padding: 60px 20px;
             margin-top: 80px;
         }
-
-        .hero-content {
-            max-width: 800px;
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
             margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        /* --- ABOUT SECTION --- */
-        .section-title {
             text-align: center;
-            margin-bottom: 50px;
         }
 
-        .section-title h2 {
-            font-size: 36px;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
+        .stat-item h3 { font-size: 36px; font-weight: 700; margin-bottom: 10px; color: var(--secondary); }
+        .stat-item p { font-size: 16px; opacity: 0.9; }
 
-        .section-title .line {
-            width: 60px;
-            height: 4px;
-            background: var(--secondary-color);
-            margin: 0 auto;
-            border-radius: 2px;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
+        /* --- Doctor/Service Details --- */
+        .detail-section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+        
+        .detail-row {
+            display: flex;
             align-items: center;
-        }
-
-        .about-img {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .about-img img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* --- SERVICES SECTION --- */
-        .services {
-            background: var(--accent-color);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
+            gap: 50px;
+            margin-bottom: 60px;
             background: var(--white);
             padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            transition: var(--transition);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
+            border-radius: 12px;
             box-shadow: var(--shadow);
         }
 
-        .service-icon {
-            font-size: 40px;
-            color: var(--secondary-color);
-            margin-bottom: 20px;
-        }
+        .detail-row:nth-child(even) { flex-direction: row-reverse; }
 
-        .service-card h3 {
-            margin-bottom: 15px;
-            color: var(--text-dark);
-        }
-
-        /* --- FACILITIES --- */
-        .facilities-wrapper {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
+        .detail-img { flex: 1; height: 300px; border-radius: 8px; overflow: hidden; }
+        .detail-img img { width: 100%; height: 100%; object-fit: cover; }
         
-        .facility-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            background: var(--white);
-            padding: 20px 30px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            border-left: 5px solid var(--primary-color);
-        }
+        .detail-text { flex: 1.5; }
+        .detail-text h3 { font-size: 24px; color: var(--primary); margin-bottom: 15px; }
+        .detail-text p { color: #555; line-height: 1.6; margin-bottom: 20px; }
+        .detail-doc { font-weight: 700; color: var(--dark); border-left: 4px solid var(--secondary); padding-left: 10px; }
 
-        /* --- DOCTORS SECTION --- */
-        .doctors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .doctor-card {
-            background: var(--white);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .doctor-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .doctor-img {
-            height: 250px;
-            background: #e9ecef; /* Placeholder gray */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #adb5bd;
-        }
-        
-        .doctor-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .doctor-info {
-            padding: 20px;
-        }
-
-        .doctor-info h3 {
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-
-        .doctor-info p {
-            color: var(--secondary-color);
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-
-        /* --- GALLERY SECTION (NEW) --- */
-        .gallery {
-            background: var(--accent-color);
-        }
-
+        /* --- Gallery Section --- */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px 5%;
+            max-width: 1200px;
+            margin: 0 auto 80px;
         }
+        .g-img { height: 200px; border-radius: 8px; overflow: hidden; cursor: pointer; }
+        .g-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; }
+        .g-img:hover img { transform: scale(1.1); }
 
-        .gallery-item {
-            position: relative;
-            height: 250px;
-            border-radius: 15px;
-            overflow: hidden;
-            cursor: pointer;
+        /* --- Footer --- */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 60px 5% 100px; /* Extra padding bottom for mobile cta */
         }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 86, 179, 0.4);
-            opacity: 0;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 600;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        /* --- CONTACT & FOOTER --- */
-        .contact {
-            background: #0b1c2c;
-            color: var(--white);
-        }
-
-        .footer-grid {
+        
+        .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .footer-col h3 {
-            color: var(--secondary-color);
-            margin-bottom: 20px;
-        }
+        .f-col h4 { color: white; margin-bottom: 20px; font-size: 18px; }
+        .f-col p { margin-bottom: 10px; }
+        .f-col i { color: var(--secondary); margin-right: 10px; }
 
-        .footer-links li {
-            margin-bottom: 10px;
+        /* --- Mobile Sticky CTA --- */
+        .mobile-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            display: none;
+            z-index: 1001;
         }
+        
+        .mobile-cta-grid { display: flex; }
+        .m-btn { flex: 1; padding: 15px; text-align: center; font-weight: 700; font-size: 16px; }
+        .m-call { background: var(--primary); color: white; }
+        .m-wa { background: var(--whatsapp); color: white; }
 
-        .footer-links a:hover {
-            color: var(--secondary-color);
-        }
-
-        .contact-info li {
-            margin-bottom: 15px;
-            display: flex;
-            gap: 15px;
-        }
-
-        .contact-info i {
-            color: var(--secondary-color);
-            margin-top: 5px;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            font-size: 14px;
-            color: #889bb0;
-        }
-
-        /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none; /* Add JS toggle for real production or keep simple */
-            }
-            .mobile-menu-btn {
-                display: block;
-            }
-            .hero h1 {
-                font-size: 32px;
-            }
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
+            .hero { flex-direction: column; padding-top: 20px; }
+            .hero-content { padding-right: 0; margin-bottom: 40px; text-align: center; }
+            .hero-cta-card { width: 100%; }
+            .detail-row { flex-direction: column !important; gap: 20px; }
+            .detail-img { width: 100%; height: 200px; }
+            .header-contact span { display: none; } /* Hide number on mobile header */
+            .mobile-cta { display: block; }
         }
     </style>
     
@@ -463,283 +303,182 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 13.1090, 
-        "longitude": 80.1912 
+        "latitude": 13.1090,
+        "longitude": 80.1912
       },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "18:00",
-          "closes": "21:00"
-        }
-      ],
-      "founder": {
-          "@type": "Person",
-          "name": "Dr. Koushik Lakshmipathy"
-      }
+      "founder": { "@type": "Person", "name": "Dr. Koushik Lakshmipathy" }
     }
     </script>
 </head>
 <body>
 
     <header>
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <i class="fas fa-heartbeat"></i> LKS Polyclinic
+        <a href="#" class="logo">
+            <i class="fas fa-heartbeat"></i> LKS Polyclinic
+        </a>
+        <div class="header-contact">
+            <a href="tel:+919360004998" class="phone-btn">
+                <i class="fas fa-phone-alt"></i> <span>093600 04998</span>
             </a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Specialties</a></li>
-                <li><a href="#doctors">Doctors</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="https://wa.me/919360004998" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Book Now</a>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1>Expert Care for a Healthier Life</h1>
-            <p>Providing world-class diagnostics and compassionate care in Pulmonology, Oncology, ENT, and Diabetology. Founded by Dr. Koushik Lakshmipathy.</p>
-            <a href="#services" class="btn btn-primary">Explore Services</a>
-            <a href="#contact" class="btn btn-outline" style="border-color: white; color: white; margin-left: 10px;">Contact Us</a>
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">#1 Clinic in Korattur</span>
+            <h1>Expert Care for <br><span>Lungs & Life.</span></h1>
+            <p class="hero-sub">
+                Comprehensive multi-specialty care founded by Dr. Koushik Lakshmipathy. Specializing in Pulmonology, Oncology, and ENT with advanced diagnostics.
+            </p>
+            <div style="margin-bottom: 30px;">
+                <p><i class="fas fa-check-circle" style="color:var(--secondary)"></i> Advanced In-House Lab</p>
+                <p><i class="fas fa-check-circle" style="color:var(--secondary)"></i> Expert Specialists</p>
+                <p><i class="fas fa-check-circle" style="color:var(--secondary)"></i> Pharmacy On-Site</p>
+            </div>
+        </div>
+
+        <div class="hero-cta-card">
+            <h3 class="cta-title">Book an Appointment</h3>
+            <p class="cta-sub">Consult our top specialists today.</p>
+            
+            <a href="https://wa.me/919360004998?text=Hi%20LKS%20Polyclinic,%20I%20would%20like%20to%20book%20an%20appointment." class="wa-button">
+                <i class="fab fa-whatsapp"></i> Book via WhatsApp
+            </a>
+            
+            <p style="font-size: 13px; color: #999; margin: 10px 0;">OR</p>
+
+            <a href="tel:+919360004998" class="call-button-sec">
+                <i class="fas fa-phone-alt"></i> Call Now
+            </a>
         </div>
     </section>
 
-    <section id="about" class="section-padding">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1516574187841-693083f69802?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="LKS Clinic Interior">
-                </div>
-                <div class="about-content">
-                    <div class="section-title" style="text-align: left;">
-                        <h2>About LKS Polyclinic</h2>
-                        <div class="line" style="margin: 0;"></div>
-                    </div>
-                    <p style="margin-top: 20px; color: var(--text-light);">
-                        Established in 2025, LKS Polyclinic is dedicated to providing accessible and high-quality medical care. While we offer a range of multi-specialty services, our primary focus lies in <strong>Pulmonology</strong> and respiratory health.
-                    </p>
-                    <p style="margin-top: 15px; color: var(--text-light);">
-                        Our mission is to treat not just the disease but the person, ensuring every patient feels supported through early diagnosis, preventive education, and coordinated care.
-                    </p>
-                    
-                    <div class="facilities-wrapper" style="justify-content: start;">
-                        <div class="facility-item">
-                            <i class="fas fa-flask fa-2x" style="color:var(--primary-color)"></i>
-                            <div>
-                                <h4>In-House Lab</h4>
-                                <small>Quick Diagnostics</small>
-                            </div>
-                        </div>
-                        <div class="facility-item">
-                            <i class="fas fa-pills fa-2x" style="color:var(--primary-color)"></i>
-                            <div>
-                                <h4>Pharmacy</h4>
-                                <small>Available On-site</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="section-padding" style="padding: 60px 0;">
+        <div class="section-title">
+            <h2>Centres of Excellence</h2>
+            <div class="line"></div>
         </div>
-    </section>
-
-    <section id="services" class="section-padding services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Specialties</h2>
-                <div class="line"></div>
-                <p style="margin-top: 15px;">Comprehensive healthcare across multiple disciplines.</p>
+        <div class="coe-grid">
+            <div class="coe-card">
+                <i class="fas fa-lungs coe-icon"></i>
+                <div class="coe-name">Pulmonology</div>
             </div>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-lungs service-icon"></i>
-                    <h3>Pulmonology</h3>
-                    <p>Expert care for Asthma, COPD, ILD, bronchitis, and other respiratory conditions.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-ribbon service-icon"></i>
-                    <h3>Surgical Oncology</h3>
-                    <p>Advanced cancer care and surgical interventions with compassion.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-head-side-cough service-icon"></i>
-                    <h3>ENT & Head Neck</h3>
-                    <p>Diagnosis and treatment for Ear, Nose, and Throat disorders.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-tint service-icon"></i>
-                    <h3>Diabetology</h3>
-                    <p>Management of diabetes and lifestyle guidance for long-term health.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-user-md service-icon"></i>
-                    <h3>General Medicine</h3>
-                    <p>Primary care for all regular health checkups and fever management.</p>
-                </div>
+            <div class="coe-card">
+                <i class="fas fa-ribbon coe-icon"></i>
+                <div class="coe-name">Oncology</div>
+            </div>
+            <div class="coe-card">
+                <i class="fas fa-head-side-cough coe-icon"></i>
+                <div class="coe-name">ENT</div>
+            </div>
+            <div class="coe-card">
+                <i class="fas fa-tint coe-icon"></i>
+                <div class="coe-name">Diabetology</div>
+            </div>
+            <div class="coe-card">
+                <i class="fas fa-user-md coe-icon"></i>
+                <div class="coe-name">Gen. Medicine</div>
             </div>
         </div>
     </section>
 
-    <section id="doctors" class="section-padding">
-        <div class="container">
-            <div class="section-title">
-                <h2>Meet Our Specialists</h2>
-                <div class="line"></div>
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>2025</h3>
+                <p>Established</p>
             </div>
-
-            <div class="doctors-grid">
-                <div class="doctor-card">
-                    <div class="doctor-img">
-                        <img src="https://via.placeholder.com/400x400?text=Dr.+Koushik" alt="Dr. Koushik Lakshmipathy">
-                    </div>
-                    <div class="doctor-info">
-                        <h3>Dr. Koushik Lakshmipathy</h3>
-                        <p>Pulmonologist</p>
-                        <small>Founder</small>
-                    </div>
-                </div>
-
-                <div class="doctor-card">
-                    <div class="doctor-img">
-                         <img src="https://via.placeholder.com/400x400?text=Dr.+Kenny" alt="Dr. Kenny Robert J">
-                    </div>
-                    <div class="doctor-info">
-                        <h3>Dr. Kenny Robert J</h3>
-                        <p>Surgical Oncologist</p>
-                    </div>
-                </div>
-
-                <div class="doctor-card">
-                    <div class="doctor-img">
-                         <img src="https://via.placeholder.com/400x400?text=Dr.+Srinivasan" alt="Dr. Srinivasan V">
-                    </div>
-                    <div class="doctor-info">
-                        <h3>Dr. Srinivasan V</h3>
-                        <p>ENT Surgeon</p>
-                    </div>
-                </div>
-
-                <div class="doctor-card">
-                    <div class="doctor-img">
-                         <img src="https://via.placeholder.com/400x400?text=Dr.+Kishore" alt="Dr. Kishore Karthick">
-                    </div>
-                    <div class="doctor-info">
-                        <h3>Dr. Kishore Karthick</h3>
-                        <p>Diabetologist</p>
-                    </div>
-                </div>
+            <div class="stat-item">
+                <h3>4+</h3>
+                <p>Specialists</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Patient Care</p>
+            </div>
+            <div class="stat-item">
+                <h3>Lab</h3>
+                <p>In-House Facilities</p>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="section-padding gallery">
-        <div class="container">
-            <div class="section-title">
-                <h2>Clinic Gallery</h2>
-                <div class="line"></div>
-                <p style="margin-top: 15px;">A glimpse into our state-of-the-art facilities.</p>
+    <div class="detail-section">
+        <div class="detail-row">
+            <div class="detail-img">
+                <img src="https://images.unsplash.com/photo-1584515933487-9d3005590ea2?auto=format&fit=crop&q=80" alt="Pulmonology">
             </div>
+            <div class="detail-text">
+                <h3>Pulmonology</h3>
+                <p>LKS Polyclinic is a leading center for respiratory health in Chennai. We specialize in treating Asthma, COPD, Bronchitis, and Interstitial Lung Diseases (ILD). Our goal is to help you breathe easier with advanced diagnostics and personalized care plans.</p>
+                <div class="detail-doc">Consult: Dr. Koushik Lakshmipathy</div>
+            </div>
+        </div>
 
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80" alt="Reception">
-                    <div class="gallery-overlay">Reception</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Laboratory">
-                    <div class="gallery-overlay">In-House Lab</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1581595220892-b0739db33d66?auto=format&fit=crop&w=600&q=80" alt="Consultation Room">
-                    <div class="gallery-overlay">Consultation Room</div>
-                </div>
-                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" alt="Pharmacy">
-                    <div class="gallery-overlay">Pharmacy</div>
+        <div class="detail-row">
+            <div class="detail-img">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80" alt="Oncology">
+            </div>
+            <div class="detail-text">
+                <h3>Surgical Oncology</h3>
+                <p>Cancer care requires precision and compassion. Our oncology department offers expert surgical interventions and comprehensive cancer management strategies. We focus on early detection and effective treatment to ensure the best outcomes.</p>
+                <div class="detail-doc">Consult: Dr. Kenny Robert J</div>
+            </div>
+        </div>
+
+        <div class="detail-row">
+            <div class="detail-img">
+                <img src="https://images.unsplash.com/photo-1516574187841-693083f69802?auto=format&fit=crop&q=80" alt="ENT">
+            </div>
+            <div class="detail-text">
+                <h3>ENT & Head Neck</h3>
+                <p>From routine ear infections to complex head and neck disorders, our ENT specialists provide top-tier care. We offer treatments for sinusitis, hearing loss, throat infections, and more using modern medical equipment.</p>
+                <div class="detail-doc">Consult: Dr. Srinivasan V</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">
+        <h2>Clinic Gallery</h2>
+        <div class="line"></div>
+    </div>
+    <div class="gallery-grid">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80" alt="Reception"></div>
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1581595220892-b0739db33d66?auto=format&fit=crop&q=80" alt="Consultation"></div>
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80" alt="Pharmacy"></div>
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80" alt="Lab"></div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="f-col">
+                <h4>About LKS Polyclinic</h4>
+                <p>A premier multi-specialty clinic in Korattur, Chennai. Dedicated to providing affordable and high-quality healthcare with a focus on Pulmonology.</p>
+            </div>
+            <div class="f-col">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> No: L-21, E Ave Rd, Periyar Nagar, Korattur, Chennai - 600080</p>
+                <p><i class="fas fa-phone"></i> +91-9360004998</p>
+                <p><i class="far fa-clock"></i> Mon-Sat: 6:00 PM - 9:00 PM</p>
+            </div>
+            <div class="f-col">
+                <h4>Map</h4>
+                <div style="border-radius: 8px; overflow: hidden;">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.6987103852033!2d80.1890069!3d13.1182479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52636f0103135b%3A0x6295552036069904!2sLKS%20Poly%20Clinic!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
-    </section>
-
-    <footer id="contact" class="contact section-padding">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>LKS Polyclinic</h3>
-                    <p style="opacity: 0.8; margin-bottom: 20px;">
-                        Accessible, affordable, and high-quality medical care focused on respiratory health and general well-being.
-                    </p>
-                    <a href="https://wa.me/919360004998" class="btn btn-primary">Book Appointment</a>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>No: L-21, E Ave Rd, Periyar Nagar, Korattur, Chennai, TN 600080</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>+91-9360004998</span>
-                        </li>
-                        <li>
-                            <i class="far fa-clock"></i>
-                            <span>Mon - Sat: 6:00 PM - 9:00 PM<br><small>(Other times by Appt)</small></span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div style="margin-top: 40px; border-radius: 10px; overflow: hidden;">
-               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.672851246743!2d80.1889816750796!3d13.10903998721915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52636605e7181f%3A0x6b8a8b1b1b1b1b1b!2sPeriyar%20Nagar%2C%20Korattur%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1704600000000!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-
-            <div class="copyright">
-                <p>&copy; 2025 LKS Polyclinic. All rights reserved.</p>
-            </div>
+        <div style="text-align: center; margin-top: 40px; border-top: 1px solid #333; padding-top: 20px;">
+            <small>© 2025 LKS Polyclinic. All rights reserved.</small>
         </div>
     </footer>
 
-    <script>
-        // Simple Mobile Menu Toggle
-        const menuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
+    <div class="mobile-cta">
+        <div class="mobile-cta-grid">
+            <a href="tel:+919360004998" class="m-btn m-call"><i class="fas fa-phone-alt"></i> Call Now</a>
+            <a href="https://wa.me/919360004998" class="m-btn m-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+    </div>
 
-        menuBtn.addEventListener('click', () => {
-            if(navLinks.style.display === 'flex') {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '80px';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.background = '#fff';
-                navLinks.style.padding = '20px';
-                navLinks.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
-            }
-        });
-    </script>
 </body>
 </html>

@@ -197,21 +197,22 @@
         .section-header p { color: #666; font-size: 1.1rem; }
 
         /* SPECIALTIES GRID */
-        .specialty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        /* .specialty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; } */
 
         /* Start*/
-        /* .specialty-grid {
+        /* Default view for Desktop & Tablets: 3 cards in a row */
+        .specialty-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px; /* Adjust gap as needed */
+            gap: 20px; /* This adds nice spacing between the cards */
         }
-        
-        /* Switches to 1 column on smaller screens (like phones) */
+    
+        /* Mobile view: 1 card per row */
         @media (max-width: 768px) {
             .specialty-grid {
                 grid-template-columns: 1fr;
             }
-        } */
+        }
         /* End*/
         
         .specialty-card {
@@ -549,7 +550,7 @@
             </div>
 
             <!--  -->
-            <div class="specialty-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="specialty-grid">
                 
                 <div class="doctor-card reveal">
                     <div class="doc-img-wrap">

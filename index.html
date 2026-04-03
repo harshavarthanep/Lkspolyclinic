@@ -197,7 +197,23 @@
         .section-header p { color: #666; font-size: 1.1rem; }
 
         /* SPECIALTIES GRID */
-        .specialty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        /* .specialty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; } */
+
+        /* Start*/
+        .specialty-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px; /* Adjust gap as needed */
+        }
+        
+        /* Switches to 1 column on smaller screens (like phones) */
+        @media (max-width: 768px) {
+            .specialty-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* End*/
+        
         .specialty-card {
             background: var(--white);
             padding: 40px 30px;
@@ -532,7 +548,84 @@
                 <p>Highly qualified specialists dedicated to your well-being.</p>
             </div>
 
-            <div class="specialty-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+            <!--  -->
+            <div class="specialty-grid" style="grid-template-columns: repeat(3, 1fr);">
+                
+                <div class="doctor-card reveal">
+                    <div class="doc-img-wrap">
+                        <img src="/images/doctor1.png" alt="Dr Koushik">
+                    </div>
+                    <div class="doc-info">
+                        <div class="doc-role">Pulmonologist</div>
+                        <h4 class="doc-name">Dr. Koushik Lakshmipathy</h4>
+                        <p class="doc-bio">Specializing in Interventional Pulmonology, Asthma care, and critical respiratory management with a patient-first approach.</p>
+                        <a href="https://wa.me/919360004998?text=I%20want%20to%20consult%20Dr.%20Koushik" class="doc-btn">Book Appointment</a>
+                    </div>
+                </div>
+            
+                <div class="doctor-card reveal">
+                    <div class="doc-img-wrap">
+                        <img src="/images/doctor2.png" alt="Dr Kenny">
+                    </div>
+                    <div class="doc-info">
+                        <div class="doc-role">Surgical Oncologist</div>
+                        <h4 class="doc-name">Dr. Kenny Robert J</h4>
+                        <p class="doc-bio">Expert in complex surgical oncology procedures, soft tissue tumors, and comprehensive cancer recovery planning.</p>
+                        <a href="https://wa.me/919360004998?text=I%20want%20to%20consult%20Dr.%20Kenny" class="doc-btn">Book Appointment</a>
+                    </div>
+                </div>
+            
+                <div class="doctor-card reveal">
+                    <div class="doc-img-wrap">
+                        <img src="/images/doctor3.png" alt="Dr Srinivasan">
+                    </div>
+                    <div class="doc-info">
+                        <div class="doc-role">ENT Surgeon</div>
+                        <h4 class="doc-name">Dr. Srinivasan V</h4>
+                        <p class="doc-bio">Specialist in endoscopic sinus surgery, micro-ear surgery, and advanced head & neck evaluations.</p>
+                        <a href="https://wa.me/919360004998?text=I%20want%20to%20consult%20Dr.%20Srinivasan" class="doc-btn">Book Appointment</a>
+                    </div>
+                </div>
+            
+                <div class="doctor-card reveal">
+                    <div class="doc-img-wrap">
+                        <img src="/images/doctor4.png" alt="Dr Kishore">
+                    </div>
+                    <div class="doc-info">
+                        <div class="doc-role">Diabetologist</div>
+                        <h4 class="doc-name">Dr. Kishore Karthick</h4>
+                        <p class="doc-bio">Focuses on comprehensive Type 1 & Type 2 diabetes management, lifestyle modification, and complication prevention.</p>
+                        <a href="https://wa.me/919360004998?text=I%20want%20to%20consult%20Dr.%20Kishore" class="doc-btn">Book Appointment</a>
+                    </div>
+                </div>
+            
+                <div class="doctor-card reveal">
+                    <div class="doc-img-wrap">
+                        <img src="/images/doctor5.png" alt="Dr. M. Ashwin Venktesh">
+                    </div>
+                    <div class="doc-info">
+                        <div class="doc-role">M.B.B.S.,DNB (Gen Surgery)., FALS ( Hernia ).,</div>
+                        <h4 class="doc-name">Dr. M. Ashwin Venktesh</h4>
+                        <p class="doc-bio">Consultant - Laparoscopic and Robotic General Surgeon</p>
+                        <a href="https://wa.me/919360004998?text=I%20want%20to%20consult%20Dr.%20Ashwin" class="doc-btn">Book Appointment</a>
+                    </div>
+                </div>
+            
+                <div class="doctor-card reveal">
+                    <div class="doc-img-wrap">
+                        <img src="/images/doctor6.png" alt="Dr. K. Shruthi">
+                    </div>
+                    <div class="doc-info">
+                        <div class="doc-role">MBBS, MD Psychiatry</div>
+                        <h4 class="doc-name">Dr. K. Shruthi</h4>
+                        <p class="doc-bio">Consultant - Psychiatrist & Diabetologist</p>
+                        <a href="https://wa.me/919360004998?text=I%20want%20to%20consult%20Dr.%20Shruthi" class="doc-btn">Book Appointment</a>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <!-- <div class="specialty-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
                 <div class="doctor-card reveal">
                     <div class="doc-img-wrap">
                         <img src="/images/doctor1.png" alt="Dr Koushik">
@@ -600,7 +693,7 @@
                         <a href="https://wa.me/919360004998?text=I%20want%20to%20consult%20Dr.%20Koushik" class="doc-btn">Book Appointment</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
